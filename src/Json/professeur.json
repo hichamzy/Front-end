@@ -1,0 +1,72 @@
+{
+    "id": 7138,
+    "lastNameArabic": "HARFI ABDELMOULA",
+    "firstNameArabic": "حرفي عبد المولى",
+    "lastNameFrench": null,
+    "firstNameFrench": null,
+    "email": "ABDELMOULA.HARFI@taalim.ma",
+    "school": {
+        "code": "01669N",
+        "nameAr": "ابن هشام",
+        "nameFr": "IBNOU HICHAM"
+    },
+    "subjects": [
+        {
+            "id": "0012",
+            "nameAr": "اللغة الفرنسية",
+            "nameFr": "LANGUE FRANCAISE",
+            "levels": [
+                {
+                    "id": "2A32101110",
+                    "nameAr": "الثانية إعدادي مسار دولي",
+                    "nameFr": "2ème Année Collégial Parcours International",
+                    "classes": [
+                        {
+                            "id": "9210d27e-ec40-4568-9fbe-40146f9f1c2f",
+                            "name": "2APIC-6",
+                            "yearId": 15,
+                            "numberOfStudents": 37
+                        },
+                        {
+                            "id": "5e3f7e00-0072-46c5-aceb-977e959a3946",
+                            "name": "2APIC-4",
+                            "yearId": 15,
+                            "numberOfStudents": 37
+                        },
+                        {
+                            "id": "c1e3cd36-2f51-48ce-87ff-a7154af374f5",
+                            "name": "2APIC-5",
+                            "yearId": 15,
+                            "numberOfStudents": 36
+                        }
+                    ]
+                },
+                {
+                    "id": "2A33101110",
+                    "nameAr": "الثالثة إعدادي مسار دولي",
+                    "nameFr": "3ème Année Collégial Parcours International",
+                    "classes": [
+                        {
+                            "id": "9da67448-6600-4d1d-b484-11328acd7acf",
+                            "name": "3APIC-6",
+                            "yearId": 15,
+                            "numberOfStudents": 37
+                        },
+                        {
+                            "id": "47e21117-6abc-4cc7-903e-61eaf4472861",
+                            "name": "3APIC-5",
+                            "yearId": 15,
+                            "numberOfStudents": 37
+                        },
+                        {
+                            "id": "3120563a-5cc5-4495-b5dc-d1013c2b138a",
+                            "name": "3APIC-4",
+                            "yearId": 15,
+                            "numberOfStudents": 36
+                        }
+                    ]
+                }
+            ]
+ }
+]
+}

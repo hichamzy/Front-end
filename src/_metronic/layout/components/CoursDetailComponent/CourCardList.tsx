@@ -3,61 +3,70 @@ import React from 'react';
 const CourCardList = () => {
     const coursCards = [
         {
-            
+            id: 1,
             icon: "ki-book-open",
             statusText: "Terminé",
             statusColor: "success", // Green color for "Terminé"
             cardTitle: "Rappel"
         },
         {
+            id: 2,
             icon: "ki-briefcase",
             statusText: "Terminé",
             statusColor: "success", // Green color for "Terminé"
             cardTitle: "Bilan"
         },
         {
+            id: 3,
             icon: "ki-medal-star",
             statusText: "En cours",
             statusColor: "primary", // Primary color for "En cours"
             cardTitle: "Fiches des activités"
         },
         {
+            id: 4,
             icon: "ki-screen",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Média: Organisation de l'appareil digestif chez l'Homme"
         },
         {
+            id: 5,
             icon: "ki-screen",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Média: Dissection du lapin"
         },
         {
+            id: 6,
             icon: "ki-crown-2",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Activités d'apprentissage - Partie 1"
         },
         {
+            id: 7,
             icon: "ki-crown-2",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Activités d'apprentissage - Partie 2"
         },
         {
+            id: 8,
             icon: "ki-information",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Pour aller plus loin"
         },
         {
+            id: 9,
             icon: "ki-questionnaire-tablet",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
             cardTitle: "Testez vos acquis"
         },
         {
+            id: 10,
             icon: "ki-verify",
             statusText: "En attente",
             statusColor: "#ffffff", // White color for "En attente"
@@ -65,11 +74,12 @@ const CourCardList = () => {
         }
     ];
     
+    
 
     return (
         <div className="row gx-5 gx-xl-8 mb-5 mb-xl-8 justify-content-center">
             {coursCards.map((card, index) => (
-                <div key={index} className="col-xl-3 mb-8 position-relative">
+                <div key={index} className="col-lg-4 mb-8 position-relative">
                  
                     <a href="#" className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
                        data-bs-toggle="modal" data-bs-target={`#kt_modal_${card.cardTitle.replace(/\s+/g, '')}`}>

@@ -103,12 +103,7 @@ const CourseCard: FC<{
 						right: "10px",
 					}}
 				>
-					<input
-						className="form-check-input"
-						type="checkbox"
-						id={`input-${id}`}
-						onClick={(e) => e.stopPropagation()}
-					/>
+					
 				</label>
 				<div className="card-body">
 					<img src={imageURL} alt="" className="card-img-top mb-10" />

@@ -1,112 +1,51 @@
-import React from 'react';
+import { useCourseStore } from "../../../../app/services/courses";
 
 const CourCardList = () => {
-    const coursCards = [
-        {
-            id: 1,
-            icon: "ki-book-open",
-            statusText: "Terminé",
-            statusColor: "success", // Green color for "Terminé"
-            cardTitle: "Rappel"
-        },
-        {
-            id: 2,
-            icon: "ki-briefcase",
-            statusText: "Terminé",
-            statusColor: "success", // Green color for "Terminé"
-            cardTitle: "Bilan"
-        },
-        {
-            id: 3,
-            icon: "ki-medal-star",
-            statusText: "En cours",
-            statusColor: "primary", // Primary color for "En cours"
-            cardTitle: "Fiches des activités"
-        },
-        {
-            id: 4,
-            icon: "ki-screen",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Média: Organisation de l'appareil digestif chez l'Homme"
-        },
-        {
-            id: 5,
-            icon: "ki-screen",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Média: Dissection du lapin"
-        },
-        {
-            id: 6,
-            icon: "ki-crown-2",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Activités d'apprentissage - Partie 1"
-        },
-        {
-            id: 7,
-            icon: "ki-crown-2",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Activités d'apprentissage - Partie 2"
-        },
-        {
-            id: 8,
-            icon: "ki-information",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Pour aller plus loin"
-        },
-        {
-            id: 9,
-            icon: "ki-questionnaire-tablet",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Testez vos acquis"
-        },
-        {
-            id: 10,
-            icon: "ki-verify",
-            statusText: "En attente",
-            statusColor: "#ffffff", // White color for "En attente"
-            cardTitle: "Test final"
-        }
-    ];
-    
-    
-
-    return (
-        <div className="row gx-5 gx-xl-8 mb-5 mb-xl-8 justify-content-center">
-            {coursCards.map((card, index) => (
-                <div key={index} className="col-lg-4 mb-8 position-relative">
-                 
-                    <a href="#" className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
-                       data-bs-toggle="modal" data-bs-target={`#kt_modal_${card.cardTitle.replace(/\s+/g, '')}`}>
-                        <div className="card-header" style={{backgroundColor:"#f3f6ff" }}>
-                            <h3 className="card-title">
-                            <div className="card-toolbar">
-								<h3 className="card-title">
-									<i className={`ki-duotone text-primary ${card.icon} fs-3x`}><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span></i>
-									</h3>
-													
+	const { course } = useCourseStore();
+	if (!course) return null;
+	return (
+		<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8 justify-content-center">
+			{course.Elements.map((element, i) => (
+				<div key={i} className="col-lg-4 mb-8 position-relative">
+					<a
+						href="#"
+						className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
+					>
+						<div className="card-header" style={{ backgroundColor: "#f3f6ff" }}>
+							<h3 className="card-title">
+								<div className="card-toolbar">
+									<h3
+										className="card-title"
+										dangerouslySetInnerHTML={{
+											__html: element.IconBody,
+										}}
+									></h3>
 								</div>
-                            </h3>
-                            
-                            <div className="card-toolbar">
-                          
-                                <span className={`badge badge-light-${card.statusColor} fw-bold me-10 px-4 py-3`}>{card.statusText}</span>
-                                <input className="form-check-input btn-telecharger" type="checkbox" value="" id={`flexCheckDefault${index + 1}`} />
-                            </div>
-                        </div>
-                        <div className="card-body text-center text-white d-flex align-items-center">
-                            <h4 className="w-100">{card.cardTitle}</h4>
-                        </div>
-                    </a>
-                </div>
-            ))}
-        </div>
-    );
-}
+							</h3>
+
+							<div className="card-toolbar">
+								<span
+									className={`badge badge-light-${
+										element.Status ?? "success"
+									} fw-bold me-10 px-4 py-3`}
+								>
+									{element.Status}
+								</span>
+								<input
+									className="form-check-input"
+									type="checkbox"
+									onChange={(e) => e.stopPropagation()}
+								/>
+							</div>
+						</div>
+						<div className="card-body text-center text-white d-flex align-items-center">
+							<h4 className="w-100">{element.ElementName}</h4>
+						</div>
+					</a>
+				</div>
+			))}
+		</div>
+	);
+};
 
 export default CourCardList;

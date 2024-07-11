@@ -3,6 +3,7 @@ import React from 'react';
 const CourCardList = () => {
     const coursCards = [
         {
+            
             icon: "ki-book-open",
             statusText: "Terminé",
             statusColor: "success", // Green color for "Terminé"

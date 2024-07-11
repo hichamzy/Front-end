@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { useIntl } from "react-intl";
 import { PageTitle } from "../../../_metronic/layout/core";
 import { Link } from "react-router-dom";
+import { useProfesseurStore } from "../../services/professeurs";
 
 const SearchCard: FC = () => {
 	const [isOpen, setIsOpen] = useState(true);
@@ -161,10 +162,12 @@ const DashboardPage: FC = () => (
 );
 
 const DashboardWrapper: FC = () => {
+	const { professeur } = useProfesseurStore();
+	if (professeur === null) return null;
 	const intl = useIntl();
 	return (
 		<>
-			<PageTitle breadcrumbs={[]}>Bonjour Sanae Mrabet</PageTitle>
+			<PageTitle breadcrumbs={[]}>Bonjour {professeur.lastNameArabic}</PageTitle>
 			<DashboardPage />
 		</>
 	);

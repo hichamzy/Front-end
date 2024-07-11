@@ -406,7 +406,7 @@ const Search: FC = () => {
               </div>
             </div>
 
-            <div ref={suggestionsElement} className='mb-4' data-kt-search-element='main'>
+           {/** <div ref={suggestionsElement} className='mb-4' data-kt-search-element='main'>
               <div className='d-flex flex-stack fw-bold mb-4'>
                 <span className='text-muted fs-6 me-2'>Recently Searched:</span>
               </div>
@@ -518,7 +518,7 @@ const Search: FC = () => {
                 </div>
               </div>
             </div>
-
+*/} 
             <div ref={emptyElement} data-kt-search-element='empty' className='text-center d-none'>
               <div className='pt-10 pb-10'>
                 <KTIcon iconName='search-list' className='fs-4x opacity-50' />

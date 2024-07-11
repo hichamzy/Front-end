@@ -11,7 +11,7 @@ const BuilderPage: React.FC = () => {
 
   const updateConfig = () => {
     setConfigLoading(true)
-    try {
+    try {   
       LayoutSetup.setConfig(config)
       window.location.reload()
     } catch (error) {

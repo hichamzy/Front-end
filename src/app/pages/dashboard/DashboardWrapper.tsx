@@ -34,36 +34,36 @@ const SearchCard: FC = () => {
 										id="domaines"
 									>
 										<option value=""></option>
-										<option value="1">Today 16 Feb</option>
-										<option value="2">In Progress</option>
-										<option value="3">Done</option>
+										<option value="1">Domaines 1</option>
+										<option value="2">Domaines 2</option>
+										<option value="3">Domaines 3</option>
 									</select>
 								</div>
 								<div className="col-lg-3">
-									<label className="form-label">Status:</label>
+									<label className="form-label">Module:</label>
 									<select className="form-select form-select-solid">
 										<option value=""></option>
-										<option value="1">Today 16 Feb</option>
-										<option value="2">In Progress</option>
-										<option value="3">Done</option>
+										<option value="1">Module 1</option>
+										<option value="2">Module 2</option>
+										<option value="3">Module 3</option>
 									</select>
 								</div>
 								<div className="col-lg-3">
-									<label className="form-label">Status:</label>
+									<label className="form-label">Unités:</label>
 									<select className="form-select form-select-solid">
 										<option value=""></option>
-										<option value="1">Today 16 Feb</option>
-										<option value="2">In Progress</option>
-										<option value="3">Done</option>
+										<option value="1">Unité 1</option>
+										<option value="2">Unité 2 </option>
+										<option value="3">Unité 3</option>
 									</select>
 								</div>
 								<div className="col-lg-3">
-									<label className="form-label">Status:</label>
+									<label className="form-label">Chapitres</label>
 									<select className="form-select form-select-solid">
 										<option value=""></option>
-										<option value="1">Today 16 Feb</option>
-										<option value="2">In Progress</option>
-										<option value="3">Done</option>
+										<option value="1">Chapitre 1</option>
+										<option value="2">Chapitre 2</option>
+										<option value="3">Chapitre 3</option>
 									</select>
 								</div>
 							</div>
@@ -72,7 +72,7 @@ const SearchCard: FC = () => {
 							<label className="form-label opacity-0">Status:</label>
 							<button className="btn btn-primary w-100">
 								<i className="fa-solid fa-filter"></i>
-								Search
+								Filter
 							</button>
 						</div>
 					</div>
@@ -93,7 +93,7 @@ const CourseCard: FC<{
 	};
 }> = ({ course: { id, imageURL, title, description, progress } }) => {
 	return (
-		<Link to="#">
+		<Link to="/coursdetail">
 			<div className="card relative">
 				<label
 					htmlFor={`input-${id}`}

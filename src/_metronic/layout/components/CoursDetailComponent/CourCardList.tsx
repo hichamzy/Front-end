@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCourseStore } from "../../../../app/services/courses";
 
 const CourCardList = () => {
@@ -7,8 +8,8 @@ const CourCardList = () => {
 		<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8 justify-content-center">
 			{course.Elements.map((element, i) => (
 				<div key={i} className="col-lg-4 mb-8 position-relative">
-					<a
-						href="#"
+					<Link
+						to="/"
 						className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
 					>
 						<div className="card-header" style={{ backgroundColor: "#f3f6ff" }}>
@@ -41,7 +42,7 @@ const CourCardList = () => {
 						<div className="card-body text-center text-white d-flex align-items-center">
 							<h4 className="w-100">{element.ElementName}</h4>
 						</div>
-					</a>
+					</Link>
 				</div>
 			))}
 		</div>

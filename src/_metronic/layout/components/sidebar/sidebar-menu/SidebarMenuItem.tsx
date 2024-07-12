@@ -37,7 +37,7 @@ const SidebarMenuItem: FC<Props & WithChildren> = ({
         {icon && app?.sidebar?.default?.menu?.iconType === 'svg' && (
           <span className='menu-icon'>
             {' '}
-            <KTIcon  iconName={icon} iconType='solid' className='fs-2x' />
+            <KTIcon color='white'  iconName={icon} iconType='solid' className='fs-2x' />
           </span>
         )}
         {fontIcon && app?.sidebar?.default?.menu?.iconType === 'font' && (

@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { PageTitle } from "../../../_metronic/layout/core";
 import { Link } from "react-router-dom";
 import { useProfesseurStore } from "../../services/professeurs";
+import { useCourseStore } from "../../services/courses";
 
 const SearchCard: FC = () => {
 	const [isOpen, setIsOpen] = useState(true);
@@ -137,6 +138,8 @@ const CoursesList: FC = () => {
 			progress: 61,
 		},
 	];
+
+	
 	return (
 		<div className="row g-5 g-xl-10">
 			{courses.map((course) => (

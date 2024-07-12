@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { PageTitle } from "../../../_metronic/layout/core";
 import { Link } from "react-router-dom";
@@ -173,5 +173,6 @@ const DashboardWrapper: FC = () => {
 		</>
 	);
 };
+
 
 export { DashboardWrapper };

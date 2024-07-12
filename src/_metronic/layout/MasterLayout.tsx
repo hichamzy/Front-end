@@ -19,7 +19,11 @@ const MasterLayout = () => {
 
 	const { isError } = useQuery({
 		queryKey: "get-professeur",
-		queryFn: getProfesseurByEmail,
+
+		queryFn:()=>{
+			//return getProfesseurByEmail("ABDELMOULA.HARFI@taalim.ma")
+			return getProfesseurByEmail()
+		},		
 		onSuccess: (data) => setProfesseur(data),
 		refetchOnWindowFocus: false,
 	});

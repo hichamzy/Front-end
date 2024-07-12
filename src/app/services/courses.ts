@@ -9,6 +9,9 @@ type CourseStore = {
 
 export const getCourseById = async (id: string) => {
 	const response = await axios.get<Course>(
+		//"http://localhost:5189/api/Courses"
+		//`${import.meta.env.VITE_APP_API_URL_COURSES}/Courses'
+
 		`http://localhost:5173/metronic8/react/demo1/json/data.json`
 	);
 	return response.data;

@@ -32,8 +32,8 @@ const MenuItem: FC<Props> = ({to, title, icon, fontIcon, hasArrow = false, hasBu
 
         {icon && (
           <span className='menu-icon'>
-            <KTIcon iconName={icon} className='fs-2' />
-          </span>
+            <KTIcon iconName={icon} iconType='solid' className='fs-2x' />
+            </span>
         )}
 
         {fontIcon && (

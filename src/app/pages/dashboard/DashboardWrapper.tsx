@@ -1,7 +1,8 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { PageTitle } from "../../../_metronic/layout/core";
 import { Link } from "react-router-dom";
+import { GetUser } from "./Request";
 
 const SearchCard: FC = () => {
 	const [isOpen, setIsOpen] = useState(true);
@@ -185,15 +186,23 @@ const DashboardPage: FC = () => (
 );
 
 const DashboardWrapper: FC = () => {
+	const [user, setUser ] = useState<any>()
+	useEffect(()=> {
+		GetUser("ABDELMOULA.HARFI@taalim.ma").then((response)=>{
+			setUser(response)
+		})
+	})
 	const intl = useIntl();
 	return (
 		<>
 			<PageTitle breadcrumbs={[]}>
 				{intl.formatMessage({ id: "Bonjour Sanae Mrabet," })}
 			</PageTitle>
+			{JSON.stringify(user)}
 			<DashboardPage />
 		</>
 	);
 };
+
 
 export { DashboardWrapper };

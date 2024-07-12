@@ -6,7 +6,7 @@
 @include media-breakpoint-up(lg) {
     .app-sidebar-toggle {
         box-shadow: var(--#{$prefix}app-sidebar-base-toggle-btn-box-shadow) !important; 
-        background-color: var(--#{$prefix}app-sidebar-base-toggle-btn-bg-color) !important; 
+        background: linear-gradient(137.82deg, #5c61a3, #105ba6 100%, #09203f 0) !important;
         border: 1px solid var(--#{$prefix}app-sidebar-base-border-color) !important;
 
         .active i {

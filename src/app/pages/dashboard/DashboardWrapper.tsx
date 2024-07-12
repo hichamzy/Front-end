@@ -6,85 +6,83 @@ import { useProfesseurStore } from "../../services/professeurs";
 import { useCourseStore } from "../../services/courses";
 
 const SearchCard: FC = () => {
-	const [isOpen, setIsOpen] = useState(true);
-	return (
-		<>
-			<div className="card">
-				<div
-					className="card-header cursor-pointer user-select-none"
-					onClick={() => setIsOpen(!isOpen)}
-				>
-					<h3 className="card-title">
-						<i className="fa-solid fa-filter fs-2 me-2"></i>
-						Recherche
-					</h3>
-					<div className="card-toolbar">
-						<i className={`fa fa-angle-${isOpen ? "up" : "down"} fs-4`}></i>
-					</div>
-				</div>
-				{isOpen && (
-					<div className="card-body">
-						<div className="row">
-							<div className="col-md-10">
-								<div className="row">
-									<div className="col-lg-3">
-										<label className="form-label" htmlFor="domaines">
-											Domaines
-										</label>
-										<select
-											className="form-select form-select-solid"
-											id="domaines"
-										>
-											<option value=""></option>
-											<option value="1">Domaines 1</option>
-											<option value="2">Domaines 2</option>
-											<option value="3">Domaines 3</option>
-										</select>
-									</div>
-									<div className="col-lg-3">
-										<label className="form-label">Module:</label>
-										<select className="form-select form-select-solid">
-											<option value=""></option>
-											<option value="1">Module 1</option>
-											<option value="2">Module 2</option>
-											<option value="3">Module 3</option>
-										</select>
-									</div>
-									<div className="col-lg-3">
-										<label className="form-label">Unités:</label>
-										<select className="form-select form-select-solid">
-											<option value=""></option>
-											<option value="1">Unité 1</option>
-											<option value="2">Unité 2 </option>
-											<option value="3">Unité 3</option>
-										</select>
-									</div>
-									<div className="col-lg-3">
-										<label className="form-label">Chapitres</label>
-										<select className="form-select form-select-solid">
-											<option value=""></option>
-											<option value="1">Chapitre 1</option>
-											<option value="2">Chapitre 2</option>
-											<option value="3">Chapitre 3</option>
-										</select>
-									</div>
-								</div>
+    const [isOpen, setIsOpen] = useState(true);
+
+    return (
+		<div className="card card-search mb-8 card-xl-stretch">
+		<div style={{backgroundColor:"#f3f6ff"}} className="card-header collapsible cursor-pointer rotate" data-bs-toggle="collapse" data-bs-target="#kt_docs_card_collapsible">
+			<h3 className="card-title"><i className="ki-outline ki-filter-search text-primary me-3 fs-2x"></i> Recherche</h3>
+			<div className="card-toolbar rotate-180">
+				<i className="ki-duotone ki-down fs-1"></i>
+			</div>
+		</div>
+		{/*begin::Body*/}
+		<div id="kt_docs_card_collapsible" className="collapse show">
+		<div className="card-body align-items-center">
+			<div className="row mt-2">
+				<div className="col-md-10">
+					<div className="row">
+						<div className="col-md-3">
+							<div className="mb-10">
+								<label className="form-label">Domaines</label>
+								<select className="form-select form-select-solid">
+								<option value="" selected disabled ></option>
+									<option value="1">Domaine 1</option>
+									<option value="2">Domaine 2</option>
+									<option value="3">Domaine 3</option>
+								</select>
 							</div>
-							<div className="col-md-2">
-								<label className="form-label opacity-0">Status:</label>
-								<button className="btn btn-primary w-100">
-									<i className="fa-solid fa-filter"></i>
-									Filter
-								</button>
+						</div>
+						<div className="col-md-3">
+							<div className="mb-10">
+								<label className="form-label">Modules</label>
+								<select className="form-select form-select-solid">
+								<option value="" selected disabled ></option>
+									<option value="1">Modules 1</option>
+									<option value="2">Modules 2</option>
+									<option value="3">Modules 3</option>
+								</select>
+							</div>
+						</div>
+						<div className="col-md-3">
+							<div className="mb-10">
+								<label className="form-label">Unités</label>
+								<select className="form-select form-select-solid">
+								<option value="" selected disabled ></option>
+									<option value="1">Unité 1</option>
+									<option value="2">Unité 2</option>
+									<option value="3">Unité 3</option>
+								</select>
+							</div>
+						</div>
+						<div className="col-md-3">
+							<div className="mb-10">
+								<label className="form-label">Chapitres</label>
+								<select className="form-select form-select-solid">
+									<option value="" selected disabled></option>
+									<option value="1">Chapitres 1</option>
+									<option value="2">Chapitres 2</option>
+									<option value="3">Chapitres 3</option>
+								</select>
 							</div>
 						</div>
 					</div>
-				)}
-			</div>
-		</>
-	);
-};
 
+				</div>
+				
+				<div className="col-md-2">
+						<div className="mb-10">
+							<button className="btn btn-md btn-primary w-100 mt-9 me-2"><i className="ki-duotone ki-filter-search fs-1"><span className="path1"></span><span className="path2"></span><span className="path2"></span></i> Filtrer</button>
+						</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+		{/*end::Body*/}
+	</div>
+    );
+};
 const CourseCard: FC<{
 	course: {
 		id: number;

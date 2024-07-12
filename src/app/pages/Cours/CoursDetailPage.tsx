@@ -1,7 +1,7 @@
 import { PageTitle } from "../../../_metronic/layout/core";
 import CoursInfo from "../../../_metronic/layout/components/CoursDetailComponent/coursInfo";
 import CoursImage from "../../../_metronic/layout/components/CoursDetailComponent/coursImage";
-import CoursProgression from "../../../_metronic/layout/components/CoursDetailComponent/CoursProgression";
+import CoursProgression from "../../../_metronic/layout/components/CoursDetailComponent/CoursProgression/CoursProgression";
 
 import CourscardList from "../../../_metronic/layout/components/CoursDetailComponent/CourCardList";
 import { useQuery } from "react-query";
@@ -26,7 +26,7 @@ const CoursDetail = () => {
 			<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8">
 				<CoursImage />
 				<CoursInfo />
-				<CoursProgression />
+				<CoursProgression chartColor="primary" chartHeight="200px" value={69} />
 			</div>
 			<CourscardList />
 		</div>

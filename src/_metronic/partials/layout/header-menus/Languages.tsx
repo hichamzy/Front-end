@@ -6,18 +6,13 @@ import {useLang, setLanguage} from '../../../i18n/Metronici18n'
 
 const languages = [
   {
-    lang: 'en',
-    name: 'English',
-    flag: toAbsoluteUrl('/media/flags/united-states.svg'),
-  },
-  {
     lang: 'fr',
-    name: 'French',
+    name: 'français',
     flag: toAbsoluteUrl('/media/flags/france.svg'),
   },{
     lang: 'ma',
     name: ' العربية',  
-    flag: toAbsoluteUrl('/media/flags/france.svg'),
+    flag: toAbsoluteUrl('/media/flags/morocco.svg'),
   },
 ]
 
@@ -39,7 +34,7 @@ const Languages: FC = () => {
             <img
               className='w-15px h-15px rounded-1 ms-2'
               src={currentLanguage?.flag}
-              alt='metronic'
+              alt='ppn'
             />
           </span>
         </span>

@@ -1,0 +1,148 @@
+{
+    "CourseName": "La digestion des aliments dans le tube digestif",
+    "Description": "Sciences de la vie et de la terre",
+    "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+    "Photo": "https://ffmpegblob.blob.core.windows.net/ppn/img1.png",
+    "ProfessorId": "aca48070-2c60-4fea-a41b-0a0ed0efd4fd",
+    "Progession": "",
+    "Status": "",
+    "NiveauId": "",
+    "MatiereId": "",
+    "Elements": [
+        {
+            "ElementName": "Rappel",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "IconBody": "<i class=\"ki-duotone text-primary ki-book-open fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span></i>",
+            "Link": "/Courses/course_20240703183553/rappel-du-cours-composition-chimiques-des-aliments-role-et-importance-des-aliments-76",
+            "Status": "",
+            "contents": [
+                {
+                    "ContentName": "Rappel du cours - Composition chimique des aliments - Rôle et importance des aliments",
+                    "Type": "H5P",
+                    "FilesUrls": [
+                        "https://m3.inpt.ac.ma/mod/hvp/view.php?id=480"
+                    ]
+                }
+            ]
+        },
+        {
+            "ElementName": "Bilan",
+            "Link": "/Courses/course_20240703183553/digestion-77",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-briefcase fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Fiches des activités",
+            "Body": "kt_modal_Fichesact",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-medal-star fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Média: Organisation de l'appareil digestif chez l'Homme",
+            "Body": "kt_modal_Media_1",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-screen fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Média: Dissection du lapin",
+            "Body": "kt_modal_Media_2",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-screen fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Activités d'apprentissage - Partie 1",
+            "Body": "kt_modal_Activite_1",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Correction - Activité n°1",
+            "Body": "kt_modal_Correction_activite_1",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Activités d'apprentissage - Partie 2",
+            "Body": "kt_modal_Activite_2",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Correction - Activité n°2",
+            "Body": "kt_modal_Correction_activite_2",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Activités d'apprentissage - Partie 2 (suite)",
+            "Body": "kt_modal_Activite_2_1",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Correction - Activité n°1 (suite)",
+            "Body": "kt_modal_Correction_activite_2_1",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Activités d'apprentissage - Partie 2 (suite 2)",
+            "Body": "kt_modal_Activite_2_2",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Correction - Activité n°2 (suite)",
+            "Body": "kt_modal_Correction_activite_2_2",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-crown-2 fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Alimentation entérale et parentérale",
+            "Body": "kt_modal_Alimentation",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-information fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "La vésicule biliaire et les calculs biliaires",
+            "Body": "kt_modal_Vesicule",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-information fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Testez vos acquis",
+            "Link": "/Courses/course_20240703183553/la-digestion-des-aliments-dans-le-tube-digestif-78",
+            "Body": "",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-questionnaire-tablet fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        },
+        {
+            "ElementName": "Test final",
+            "Body": "kt_modal_Testfinal",
+            "IconBody": "<i class=\"ki-duotone text-primary text-white ki-verify fs-3x\"><span class=\"path1\"></span><span class=\"path2\"></span></i>",
+            "CourseId": "7b2dcefd-375b-40c9-bd51-3225289e5eb8",
+            "contents": []
+        }
+    ],
+    "id": "02cfcf86-3653-44d2-93f2-7324235de3be",
+    "_rid": "2+MzANNGwsUBAAAAAAAAAA==",
+    "_self": "dbs/2+MzAA==/colls/2+MzANNGwsU=/docs/2+MzANNGwsUBAAAAAAAAAA==/",
+    "_etag": "\"3000dcba-0000-0100-0000-669012540000\"",
+    "_attachments": "attachments/",
+    "_ts":" 1720717908"
+}

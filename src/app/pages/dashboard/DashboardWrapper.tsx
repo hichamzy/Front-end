@@ -2,84 +2,84 @@ import { FC, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import { PageTitle } from "../../../_metronic/layout/core";
 import { Link } from "react-router-dom";
-import { GetUser } from "./Request";
+import { useProfesseurStore } from "../../services/professeurs";
 
 const SearchCard: FC = () => {
 	const [isOpen, setIsOpen] = useState(true);
 	return (
 		<>
-		<div className="card">
-			<div
-				className="card-header cursor-pointer user-select-none"
-				onClick={() => setIsOpen(!isOpen)}
-			>
-				<h3 className="card-title">
-					<i className="fa-solid fa-filter fs-2 me-2"></i>
-					Recherche
-				</h3>
-				<div className="card-toolbar">
-					<i className={`fa fa-angle-${isOpen ? "up" : "down"} fs-4`}></i>
-				</div>
-			</div>
-			{isOpen && (
-				<div className="card-body">
-					<div className="row">
-						<div className="col-md-10">
-							<div className="row">
-								<div className="col-lg-3">
-									<label className="form-label" htmlFor="domaines">
-										Domaines
-									</label>
-									<select
-										className="form-select form-select-solid"
-										id="domaines"
-									>
-										<option value=""></option>
-										<option value="1">Domaines 1</option>
-										<option value="2">Domaines 2</option>
-										<option value="3">Domaines 3</option>
-									</select>
-								</div>
-								<div className="col-lg-3">
-									<label className="form-label">Module:</label>
-									<select className="form-select form-select-solid">
-										<option value=""></option>
-										<option value="1">Module 1</option>
-										<option value="2">Module 2</option>
-										<option value="3">Module 3</option>
-									</select>
-								</div>
-								<div className="col-lg-3">
-									<label className="form-label">Unités:</label>
-									<select className="form-select form-select-solid">
-										<option value=""></option>
-										<option value="1">Unité 1</option>
-										<option value="2">Unité 2 </option>
-										<option value="3">Unité 3</option>
-									</select>
-								</div>
-								<div className="col-lg-3">
-									<label className="form-label">Chapitres</label>
-									<select className="form-select form-select-solid">
-										<option value=""></option>
-										<option value="1">Chapitre 1</option>
-										<option value="2">Chapitre 2</option>
-										<option value="3">Chapitre 3</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-2">
-							<label className="form-label opacity-0">Status:</label>
-							<button className="btn btn-primary w-100">
-								<i className="fa-solid fa-filter"></i>
-								Filter
-							</button>
-						</div>
+			<div className="card">
+				<div
+					className="card-header cursor-pointer user-select-none"
+					onClick={() => setIsOpen(!isOpen)}
+				>
+					<h3 className="card-title">
+						<i className="fa-solid fa-filter fs-2 me-2"></i>
+						Recherche
+					</h3>
+					<div className="card-toolbar">
+						<i className={`fa fa-angle-${isOpen ? "up" : "down"} fs-4`}></i>
 					</div>
 				</div>
-			)}
-		</div>
+				{isOpen && (
+					<div className="card-body">
+						<div className="row">
+							<div className="col-md-10">
+								<div className="row">
+									<div className="col-lg-3">
+										<label className="form-label" htmlFor="domaines">
+											Domaines
+										</label>
+										<select
+											className="form-select form-select-solid"
+											id="domaines"
+										>
+											<option value=""></option>
+											<option value="1">Domaines 1</option>
+											<option value="2">Domaines 2</option>
+											<option value="3">Domaines 3</option>
+										</select>
+									</div>
+									<div className="col-lg-3">
+										<label className="form-label">Module:</label>
+										<select className="form-select form-select-solid">
+											<option value=""></option>
+											<option value="1">Module 1</option>
+											<option value="2">Module 2</option>
+											<option value="3">Module 3</option>
+										</select>
+									</div>
+									<div className="col-lg-3">
+										<label className="form-label">Unités:</label>
+										<select className="form-select form-select-solid">
+											<option value=""></option>
+											<option value="1">Unité 1</option>
+											<option value="2">Unité 2 </option>
+											<option value="3">Unité 3</option>
+										</select>
+									</div>
+									<div className="col-lg-3">
+										<label className="form-label">Chapitres</label>
+										<select className="form-select form-select-solid">
+											<option value=""></option>
+											<option value="1">Chapitre 1</option>
+											<option value="2">Chapitre 2</option>
+											<option value="3">Chapitre 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div className="col-md-2">
+								<label className="form-label opacity-0">Status:</label>
+								<button className="btn btn-primary w-100">
+									<i className="fa-solid fa-filter"></i>
+									Filter
+								</button>
+							</div>
+						</div>
+					</div>
+				)}
+			</div>
 		</>
 	);
 };
@@ -94,7 +94,7 @@ const CourseCard: FC<{
 	};
 }> = ({ course: { id, imageURL, title, description, progress } }) => {
 	return (
-		<Link to="/coursdetail">
+		<Link to={"/coursdetail/" + id}>
 			<div className="card relative">
 				<label
 					htmlFor={`input-${id}`}
@@ -103,14 +103,7 @@ const CourseCard: FC<{
 						top: "10px",
 						right: "10px",
 					}}
-				>
-					<input
-						className="form-check-input"
-						type="checkbox"
-						id={`input-${id}`}
-						onClick={(e) => e.stopPropagation()}
-					/>
-				</label>
+				></label>
 				<div className="card-body">
 					<img src={imageURL} alt="" className="card-img-top mb-10" />
 					<h5 className="card-title">{title}</h5>
@@ -140,25 +133,8 @@ const CoursesList: FC = () => {
 			id: 1,
 			imageURL: "/img1.png",
 			title: "La digestion des aliments dans le tube digestif",
-			description:
-				"Sciences de la vie et de la terre",
+			description: "Sciences de la vie et de la terre",
 			progress: 61,
-		},
-		{
-			id: 2,
-			imageURL: "/img1.png",
-			title: "La digestion des aliments dans le tube digestif",
-			description:
-				"Sciences de la vie et de la terre",
-			progress: 63,
-		},
-		{
-			id: 3,
-			imageURL: "/img1.png",
-			title: "La digestion des aliments dans le tube digestif",
-			description:
-				"Sciences de la vie et de la terre",
-			progress: 70,
 		},
 	];
 	return (
@@ -186,19 +162,12 @@ const DashboardPage: FC = () => (
 );
 
 const DashboardWrapper: FC = () => {
-	const [user, setUser ] = useState<any>()
-	useEffect(()=> {
-		GetUser("ABDELMOULA.HARFI@taalim.ma").then((response)=>{
-			setUser(response)
-		})
-	})
+	const { professeur } = useProfesseurStore();
+	if (professeur === null) return null;
 	const intl = useIntl();
 	return (
 		<>
-			<PageTitle breadcrumbs={[]}>
-				{intl.formatMessage({ id: "Bonjour Sanae Mrabet," })}
-			</PageTitle>
-			{JSON.stringify(user)}
+			<PageTitle breadcrumbs={[]}>Bonjour {professeur.lastNameArabic}</PageTitle>
 			<DashboardPage />
 		</>
 	);

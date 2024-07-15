@@ -40,7 +40,7 @@ if (container) {
 	createRoot(container).render(
 		<QueryClientProvider client={queryClient}>
 			<MetronicI18nProvider>
-				<AuthProvider>
+				<AuthProvider	>
 					<AppRoutes />
 				</AuthProvider>
 			</MetronicI18nProvider>

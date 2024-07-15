@@ -15,6 +15,7 @@ import esMessages from './messages/es.json'
 import frMessages from './messages/fr.json'
 import jaMessages from './messages/ja.json'
 import zhMessages from './messages/zh.json'
+
 import {WithChildren} from '../helpers'
 
 const allMessages = {
@@ -22,6 +23,7 @@ const allMessages = {
   en: enMessages,
   es: esMessages,
   fr: frMessages,
+  ma: frMessages,
   ja: jaMessages,
   zh: zhMessages,
 }

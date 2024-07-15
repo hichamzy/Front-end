@@ -9,7 +9,7 @@ const CourCardList = () => {
 			{course.Elements.map((element, i) => (
 				<div key={i} className="col-lg-4 mb-8 position-relative">
 					<Link
-						to="/"
+						to="#"
 						className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
 					>
 						<div className="card-header" style={{ backgroundColor: "#f3f6ff" }}>

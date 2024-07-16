@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-getCSSVariableValue
+
 import ApexCharts, { ApexOptions } from "apexcharts";
 import { useThemeMode } from "../../../../partials";
 import { getCSSVariableValue } from "../../../../assets/ts/_utils";

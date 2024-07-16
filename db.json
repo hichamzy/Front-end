@@ -1,0 +1,86 @@
+{
+    "courses":[
+        {
+            "CourseName": "La digestion in vitro des aliments",
+            "Description": "Sciences de la vie et de la terre",
+            "CourseId": "608a0570-f9fb-4a6d-b06b-44b8691109c1",
+            "Photo": "https://ffmpegblob.blob.core.windows.net/ppn/img2.png",
+            "ProfessorId": "aca48070-2c60-4fea-a41b-0a0ed0efd4fd",
+            "Elements": [
+                {
+                    "ElementName": "Introduction",
+                    "CourseId": "608a0570-f9fb-4a6d-b06b-44b8691109c1",
+                    "contents": [
+                        {
+                            "ContentName": "Introduction à la digestion in vitro",
+                            "Type": "H5P",
+                            "FilesUrls": [
+                                "https://example.com/invitro/introduction"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ElementName": "Expérience",
+                    "CourseId": "608a0570-f9fb-4a6d-b06b-44b8691109c1",
+                    "contents": [
+                        {
+                            "ContentName": "Détails de l'expérience de digestion in vitro",
+                            "Type": "H5P",
+                            "FilesUrls": [
+                                "https://example.com/invitro/experience"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "id": "5edc7450-24b1-45df-a3b8-ebeae2a77ec8",
+            "_rid": "2+MzANNGwsUCAAAAAAAAAA==",
+            "_self": "dbs/2+MzAA==/colls/2+MzANNGwsU=/docs/2+MzANNGwsUCAAAAAAAAAA==/",
+            "_etag": "\"0100b483-0000-0100-0000-66829ede0000\"",
+            "_attachments": "attachments/",
+            "_ts": 1719836382
+        },
+        {
+            "CourseName": "La ration alimentaire",
+            "Description": "Sciences de la vie et de la terre",
+            "CourseId": "1f5cfa0d-83f7-4694-abe2-38071e62e3b1",
+            "Photo": "https://ffmpegblob.blob.core.windows.net/ppn/img3.png",
+            "ProfessorId": "aca48070-2c60-4fea-a41b-0a0ed0efd4fd",
+            "Elements": [
+                {
+                    "ElementName": "Introduction",
+                    "CourseId": "1f5cfa0d-83f7-4694-abe2-38071e62e3b1",
+                    "contents": [
+                        {
+                            "ContentName": "Introduction à la ration alimentaire",
+                            "Type": "H5P",
+                            "FilesUrls": [
+                                "https://example.com/ration/introduction"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ElementName": "Exemples",
+                    "CourseId": "1f5cfa0d-83f7-4694-abe2-38071e62e3b1",
+                    "contents": [
+                        {
+                            "ContentName": "Exemples de rations alimentaires",
+                            "Type": "H5P",
+                            "FilesUrls": [
+                                "https://example.com/ration/exemples"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "id": "90f5b75c-c683-444f-ba8e-56648e8c770b",
+            "_rid": "2+MzANNGwsUDAAAAAAAAAA==",
+            "_self": "dbs/2+MzAA==/colls/2+MzANNGwsU=/docs/2+MzANNGwsUDAAAAAAAAAA==/",
+            "_etag": "\"0100b983-0000-0100-0000-66829ef40000\"",
+            "_attachments": "attachments/",
+            "_ts": 1719836404
+        }
+    ]
+}

@@ -36,7 +36,7 @@ import { msalConfig } from "./app/Azureprovider/auth-config";
  *
  * @see https://github.com/axios/axios#interceptors
  */
-setupAxios(axios);
+//setupAxios(axios);
 Chart.register(...registerables);
 
 const queryClient = new QueryClient();

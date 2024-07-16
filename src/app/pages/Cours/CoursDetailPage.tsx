@@ -1,34 +1,42 @@
 import { PageTitle } from "../../../_metronic/layout/core";
 import CoursInfo from "../../../_metronic/layout/components/CoursDetailComponent/coursInfo";
 import CoursImage from "../../../_metronic/layout/components/CoursDetailComponent/coursImage";
-import CoursProgression from "../../../_metronic/layout/components/CoursDetailComponent/CoursProgression/CoursProgression";
 
 import CourscardList from "../../../_metronic/layout/components/CoursDetailComponent/CourCardList";
 import { useQuery } from "react-query";
-import { useCourseStore, getCourseById } from "../../services/courses";
+import { getCourseById } from "../../services/courses";
 import { useParams } from "react-router-dom";
+import CoursProgression from "../../../_metronic/layout/components/CoursDetailComponent/CoursProgression/CoursProgression";
+
 const CoursDetail = () => {
 	const { id } = useParams();
 
-	const { setCourse } = useCourseStore();
-	const { isError } = useQuery({
-		queryKey: "courses",
+	const {
+		isError,
+		isLoading,
+		data: course,
+	} = useQuery({
+		queryKey: "course-by-id",
 		queryFn: () => getCourseById(id!),
-		onSuccess: (data) => setCourse(data),
 	});
 
 	if (isError) {
 		return <div>Une erreur s'est produite</div>;
 	}
+
+	if (isLoading || !course) {
+		return <div>Chargement...</div>;
+	}
+
 	return (
-		<div> {/* on dois mapper courscardlist de chaque cours   */}
-			<PageTitle breadcrumbs={[]}>Bonjour Sanae Mrabet</PageTitle>
+		<div>
+			<PageTitle>Bonjour Sanae Mrabet</PageTitle>
 			<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8">
-				<CoursImage /> {/* contient l image du cours  */}
-				<CoursInfo /> {/* contient les informations du cours */}
-				<CoursProgression chartColor="primary" chartHeight="200px" value={69} /> {/* contient la progression du cours  */}
+				<CoursImage photo={course.Photo} />
+				<CoursInfo course={course} />
+				<CoursProgression chartColor="primary" chartHeight="200px" value={69} />
 			</div>
-			<CourscardList /> {/* // map sur les element du  cours (les cartes )  */}
+			<CourscardList elements={course.Elements} />
 		</div>
 	);
 };

@@ -4,7 +4,7 @@ export const msalConfig = {
 		authority: "https://TetouanB2C.b2clogin.com/TetouanB2C.onmicrosoft.com/B2C_1_ppn", // Choose SUSI as your default authority.
 		knownAuthorities: ["TetouanB2C.b2clogin.com"], // Mark your B2C tenant's domain as trusted.
 		redirectUri: "http://localhost:5173/metronic8/react/demo1/", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
-		postLogoutRedirectUri: "http://localhost:5173/metronic8/react/demo1", // Indicates the page to navigate after logout.
+		postLogoutRedirectUri: "http://localhost:5173/metronic8/react/demo1/", // Indicates the page to navigate after logout.
 		navigateToLoginRequestUrl: false, // If 'true', will navigate back to the original request location before processing the auth code response.
 	},
 	cache: {

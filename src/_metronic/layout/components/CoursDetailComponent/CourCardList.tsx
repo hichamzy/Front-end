@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
-import { useCourseStore } from "../../../../app/services/courses";
+import { Element } from "../../../../types";
 
-const CourCardList = () => {  // map sur les element du  cours (les cartes )
-	const { course } = useCourseStore();
-	if (!course) return null;
+const CourCardList = ({ elements }: { elements: Element[] }) => {
 	return (
 		<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8 justify-content-center">
-			{course.Elements.map((element, i) => (
+			{elements.map((element, i) => (
 				<div key={i} className="col-lg-4 mb-8 position-relative">
 					<Link
 						to="/h5p"
+						state={element}
 						className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
 					>
 						<div className="card-header" style={{ backgroundColor: "#f3f6ff" }}>

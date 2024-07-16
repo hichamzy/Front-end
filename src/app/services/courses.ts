@@ -4,7 +4,9 @@ import { create } from "zustand";
 
 type CourseStore = {
 	course: Course | null;
-	setCourse: (course: Course) => void;
+    courses: Course[]; // Ajoutez cet état
+    setCourse: (course: Course) => void;
+    setCourses: (courses: Course[]) => void; // Ajoutez cette fonction
 };
 
 export const getCourseById = async (id: string) => {
@@ -19,5 +21,14 @@ export const getCourseById = async (id: string) => {
 
 export const useCourseStore = create<CourseStore>((set) => ({
 	course: null,
-	setCourse: (course: Course) => set({ course }),
+    courses: [], // Initialisez la liste des cours
+    setCourse: (course: Course) => set({ course }),
+    setCourses: (courses: Course[]) => set({ courses }), // Ajoutez cette fonction
 }));
+
+export const getAllCourses = async () => {
+    const response = await axios.get<Course[]>(
+        `http://localhost:5173/metronic8/react/demo1/json/data.json`
+    );
+    return response.data;
+};

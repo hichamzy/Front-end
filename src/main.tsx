@@ -19,7 +19,12 @@ import "./_metronic/assets/keenicons/solid/style.css";
 import "./_metronic/assets/sass/style.scss";
 import "./_metronic/assets/sass/plugins.scss";
 import { AppRoutes } from "./app/routing/AppRoutes";
-import { AuthProvider, setupAxios } from "./app/modules/auth";
+import { setupAxios } from "./app/modules/auth";
+
+import { PublicClientApplication } from "@azure/msal-browser";
+import { AzurAuthProvider } from "./app/Azureprovider/AzurAuthProvider";
+import { msalConfig } from "./app/Azureprovider/auth-config";
+
 /**
  * Creates `axios-mock-adapter` instance for provided `axios` instance, add
  * basic Metronic mocks and returns it.
@@ -35,14 +40,16 @@ setupAxios(axios);
 Chart.register(...registerables);
 
 const queryClient = new QueryClient();
+const msalInstance = new PublicClientApplication(msalConfig);
 const container = document.getElementById("root");
 if (container) {
 	createRoot(container).render(
 		<QueryClientProvider client={queryClient}>
 			<MetronicI18nProvider>
-				<AuthProvider	>
+				
+				<AzurAuthProvider instance={msalInstance}>
 					<AppRoutes />
-				</AuthProvider>
+				</AzurAuthProvider>
 			</MetronicI18nProvider>
 			{/* <ReactQueryDevtools initialIsOpen={false} /> */}
 		</QueryClientProvider>

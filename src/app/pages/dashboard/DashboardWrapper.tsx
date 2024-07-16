@@ -83,7 +83,7 @@ const SearchCard: FC = () => {
 	</div>
     );
 };
-const CourseCard: FC<{
+const CourseCard: FC<{ //affichage de chaque cours avec son etat
 	course: {
 		id: number;
 		imageURL: string;
@@ -93,7 +93,7 @@ const CourseCard: FC<{
 	};
 }> = ({ course: { id, imageURL, title, description, progress } }) => {
 	return (
-		<Link to={"/coursdetail/" + id}>
+		<Link to={"/coursdetail/" + id}> {/*lien vers la page de detail du cours qui contient les cartes des cours */}
 			<div className="card relative">
 				<label
 					htmlFor={`input-${id}`}
@@ -126,7 +126,7 @@ const CourseCard: FC<{
 	);
 };
 
-const CoursesList: FC = () => {
+const CoursesList: FC = () => { //les listes de tous les cours de l'enseignant
 	const courses = [
 		{
 			id: 1,
@@ -142,7 +142,7 @@ const CoursesList: FC = () => {
 		<div className="row g-5 g-xl-10">
 			{courses.map((course) => (
 				<div key={course.id} className="col-md-4">
-					<CourseCard course={course} />
+					<CourseCard course={course} /> 
 				</div>
 			))}
 		</div>

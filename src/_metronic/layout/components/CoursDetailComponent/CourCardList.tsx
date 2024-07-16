@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCourseStore } from "../../../../app/services/courses";
 
-const CourCardList = () => {
+const CourCardList = () => {  // map sur les element du  cours (les cartes )
 	const { course } = useCourseStore();
 	if (!course) return null;
 	return (
@@ -9,7 +9,7 @@ const CourCardList = () => {
 			{course.Elements.map((element, i) => (
 				<div key={i} className="col-lg-4 mb-8 position-relative">
 					<Link
-						to="#"
+						to="/h5p"
 						className="card hover-elevate-up card-contents shadow-sm card-xxl-stretch parent-hover"
 					>
 						<div className="card-header" style={{ backgroundColor: "#f3f6ff" }}>

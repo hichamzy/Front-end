@@ -8,6 +8,7 @@ import CoursDetail from "../pages/Cours/CoursDetailPage";
 import { getCSSVariableValue } from "../../_metronic/assets/ts/_utils";
 import { WithChildren } from "../../_metronic/helpers";
 import BuilderPageWrapper from "../pages/layout-builder/BuilderPageWrapper";
+import H5PCours from "../Components/H5PCours";
 
 const PrivateRoutes = () => {
 	const ProfilePage = lazy(() => import("../modules/profile/ProfilePage"));
@@ -26,6 +27,9 @@ const PrivateRoutes = () => {
 				<Route path="dashboard" element={<DashboardWrapper />} />
 
 				<Route path="coursdetail/:id" element={<CoursDetail />} />
+
+				<Route path="h5p" element={<H5PCours/>} />
+
 				<Route path="builder" element={<BuilderPageWrapper />} />
 				
 				<Route path="menu-test" element={<MenuTestPage />} />
@@ -73,7 +77,7 @@ const PrivateRoutes = () => {
 				<Route
 					path="apps/user-management/*"
 					element={
-						<SuspensedView>
+						<SuspensedView>Z
 							<UsersPage />
 						</SuspensedView>
 					}

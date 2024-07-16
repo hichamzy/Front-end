@@ -21,14 +21,14 @@ const CoursDetail = () => {
 		return <div>Une erreur s'est produite</div>;
 	}
 	return (
-		<div>
+		<div> {/* on dois mapper courscardlist de chaque cours   */}
 			<PageTitle breadcrumbs={[]}>Bonjour Sanae Mrabet</PageTitle>
 			<div className="row gx-5 gx-xl-8 mb-5 mb-xl-8">
-				<CoursImage />
-				<CoursInfo />
-				<CoursProgression chartColor="primary" chartHeight="200px" value={69} />
+				<CoursImage /> {/* contient l image du cours  */}
+				<CoursInfo /> {/* contient les informations du cours */}
+				<CoursProgression chartColor="primary" chartHeight="200px" value={69} /> {/* contient la progression du cours  */}
 			</div>
-			<CourscardList />
+			<CourscardList /> {/* // map sur les element du  cours (les cartes )  */}
 		</div>
 	);
 };
